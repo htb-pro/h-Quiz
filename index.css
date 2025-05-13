@@ -48,8 +48,8 @@ body
     display: none;
     width: 10vw;
     height: 7vh;
-    background-color: teal;
-    color: white;
+    background-color: pink;
+    color: black;
     border: none;
     cursor: pointer;
     border-radius: 10px;
@@ -60,11 +60,19 @@ body
     bottom: 0px;
     margin-bottom: 1rem;
 }
-
-.numQuestion,.Question
+#suivant:hover
+{
+    background-color: rgba(255, 192, 203, 0.797);
+    color: white;
+}
+.aboutQuestion
 {
     font-size: 22px;
     margin-top: 1rem;
+}
+.numQuestion
+{
+    color: rgb(252, 198, 207);
 }
 .assertions
 {
@@ -75,7 +83,6 @@ body
 }
 .assertions .choix
 {
-   
     width: 15rem;
     background-color: rgb(0,0,0,0.4);
     margin: 1px;
@@ -94,8 +101,8 @@ body
 .quizSection h1 
 {
     margin-bottom: 1rem;
-    background-color: green;
-    color: white;
+    background-color: pink;
+    color: rgba(0, 0, 0, 0.815);
     padding: 5px;
     font-size: 35px;
 }
@@ -105,21 +112,26 @@ body
 }
 /*----------------------classes creer en js ---------*/
 .disabled
-{
+{/*on va enelever l'evenement sur un ou plusieurs objet*/
     pointer-events:none;
 }
-.correct
+.disabled:hover
 {
+    cursor: no-drop;
+}
+.correct
+{/*on va donner changer d'arriere plan de l'objet*/
     background-color : green;
     width: 15rem;
     margin: 1px;
     padding: 5px;
+    text-align: left;
     border: none;
     color: white;
     border-radius: 5px;
 }
 .incorrect
-{
+{/*on va donner changer d'arriere plan de l'objet*/
     background-color : red;
     width: 15rem;
     margin: 1px;
@@ -127,5 +139,133 @@ body
     border: none;
     color: white;
     border-radius: 5px;
+    text-align: left;
 }
-    
+.scoreContainer
+{
+    width: 25vw;
+    height: auto;
+    display: none;
+    position: relative;
+    padding: 1rem;
+    top: 6rem;
+    left: 2.5rem;
+    background-color: rgb(0,0,0,0.4);
+}
+.finalResult
+{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+.restart
+{
+    width: auto;
+    background-color: pink;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 7px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.restart:hover
+{
+    background-color: teal;
+    border: 1px solid white;
+    color: white;
+}
+@media screen and (max-width : 800px){
+    .container
+    {
+        width: 50%;
+        height: 40vh;
+        margin: 2.5rem 0px;
+        position: relative;
+    }
+    .quizSection h1 
+    {
+    padding: 2.5px;
+    font-size: 20px;
+    }
+    .startingAction
+    {
+        width: auto;
+        height: auto;
+        margin: 5rem 3.5rem;
+    }
+    .startAction
+    {
+        width: auto;
+        height: 2.5vh;
+        padding: 5px;
+    }
+     .aboutQuestion
+    {
+        font-size: 12px;
+        margin-top: -5px;
+    }
+    .assertions .choix
+    {
+    width: 31vw;
+    padding: 5px;
+    font-size: 12px;
+    margin-left: -2rem;
+    text-align: left;
+    }
+
+    #suivant
+    {
+        width: auto;
+        padding: 5px;
+        height: auto;
+        font-size: 12px;
+        border-radius: 2px;
+    }
+    #suivant:hover
+    {
+        background-color: teal;
+        color:white;
+    }
+    .correct
+    {/*on va donner changer d'arriere plan de l'objet*/
+        background-color : green;
+        width: 31vw;
+        margin: 0px;
+        padding: 5px;
+        margin-left: -2rem;
+        border-radius: 5px;
+    }
+    .incorrect
+    {/*on va donner changer d'arriere plan de l'objet*/
+        background-color : red;
+        width: 31vw;
+        margin: 0px;
+        padding: 5px;
+        border-radius: 5px;
+        margin-left: -2rem;
+        text-align: left;
+    }
+    .finalResult
+    {
+        font-size: 12px;
+    }
+    .restart
+    {
+        width: auto;
+        background-color: pink;
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 2px;
+    }
+    .restart:hover
+    {
+        background-color: teal;
+        color: white;
+    }
+    .score
+    {
+        font-size: 12px;
+    }
+}
